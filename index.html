@@ -79,7 +79,22 @@
       const l2 = document.getElementById('letter2').value.toUpperCase();
       const l3 = document.getElementById('letter3').value.toUpperCase();
       const resultDiv = document.getElementById('result');
-      if (l1 !== l2 && l1 !== l3 && l2 !== l3 && l1 > 'B' && l2 !== 'A' && l3 < 'D' && 'A B C D'.includes(l1 + l2 + l3)) {
+
+      const possibleLetters = ['A', 'B', 'C', 'D'];
+      const inputArray = [l1, l2, l3];
+      
+      if (
+        l1 !== '' &&
+        l2 !== '' &&
+        l3 !== '' &&
+        l1 !== l2 &&
+        l1 !== l3 &&
+        l2 !== l3 &&
+        l1 > 'B' &&
+        l2 !== 'A' &&
+        l3 < 'D' &&
+        inputArray.every(item => possibleLetters.includes(item))
+      ) {
         resultDiv.innerHTML = 'CODE UNLOCKED. PASSWORD: <strong>FORCEGRID</strong>';
         resultDiv.style.color = '#00ff00';
       } else {
