@@ -95,7 +95,8 @@
         l3 < 'D' &&
         inputArray.every(item => possibleLetters.includes(item))
       ) {
-        resultDiv.innerHTML = 'CODE UNLOCKED. PASSWORD: <strong>FORCEGRID</strong>';
+        resultDiv.innerHTML = 'CODE UNLOCKED. PASSWORD: <strong>FORCEGRID</strong>' +
+          '<br/><br/> Go to the center of the Marketplace to continue.';
         resultDiv.style.color = '#00ff00';
       } else {
         resultDiv.innerHTML = 'CODE LOCKED. REASSESS CLUES.';
